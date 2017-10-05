@@ -1,0 +1,86 @@
+#   -------------------------------------------------------------
+#   Salt — Salt master configuration
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#   Project:        Woods Cloud
+#   Created:        2017-10-05
+#   License:        Trivial work, not eligible to copyright
+#   -------------------------------------------------------------
+
+#   -------------------------------------------------------------
+#   Table of contents
+#   -------------------------------------------------------------
+#
+#   :: Fedora family
+#   :: Debian
+#   :: Ubuntu
+#   :: Other distros
+#
+#   -------------------------------------------------------------
+
+#   -------------------------------------------------------------
+#   Fedora family
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+scaleway-fedora-22:
+  provider: scaleway-woodscloud-config
+  image: Fedora 22
+
+scaleway-centos-72:
+  provider: scaleway-woodscloud-config
+  image: CentOS 7.2
+
+#   -------------------------------------------------------------
+#   Debian
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+scaleway-debian-sid:
+  provider: scaleway-woodscloud-config
+  image: Debian Sid/Unstable
+
+scaleway-debian-jessie:
+  provider: scaleway-woodscloud-config
+  image: Debian Jessie (8.2 latest)
+
+scaleway-debian-stretch:
+  provider: scaleway-woodscloud-config
+  image: Debian Stretch (9.0)
+
+#   -------------------------------------------------------------
+#   Ubuntu
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+scaleway-ubuntu-trusty:
+  provider: scaleway-woodscloud-config
+  image: Ubuntu Trusty (14.04 LTS)
+
+scaleway-ubuntu-xenial:
+  provider: scaleway-woodscloud-config
+  image: Ubuntu Xenial (16.04 latest)
+
+scaleway-ubuntu-yakkety:
+  provider: scaleway-woodscloud-config
+  image: Ubuntu Yakkety (16.10 latest)
+
+scaleway-ubuntu-zesty:
+  provider: scaleway-woodscloud-config
+  image: Ubuntu Zesty (17.04 latest)
+
+#   -------------------------------------------------------------
+#   Other distros
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+scaleway-gentoo:
+  provider: scaleway-woodscloud-config
+  image: Gentoo
+
+scaleway-alpine-33:
+  provider: scaleway-woodscloud-config
+  image: Alpine Linux 3.3
+
+scaleway-arch:
+  provider: scaleway-woodscloud-config
+  image: Archlinux
+
+scaleway-suse-132:
+  provider: scaleway-woodscloud-config
+  image: openSUSE 13.2

@@ -1,11 +1,11 @@
 #   -------------------------------------------------------------
-#   Salt configuration for Woods Cloud servers
+#   Salt — Salt master configuration
 #   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #   Project:        Woods Cloud
-#   Created:        2017-09-25
+#   Created:        2017-10-05
 #   License:        Trivial work, not eligible to copyright
 #   -------------------------------------------------------------
 
-base:
-  'local':
-    - roles/saltmaster
+include:
+  - .salt-cloud
+  - .staging
