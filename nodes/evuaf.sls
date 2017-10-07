@@ -1,12 +1,13 @@
 #   -------------------------------------------------------------
-#   Salt configuration for Woods Cloud servers
+#   Salt — Nodes
 #   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #   Project:        Woods Cloud
-#   Created:        2017-09-25
+#   User:           Evuaf
+#   Semantic field: Legendary swords
+#   Created:        2017-10-07
 #   License:        Trivial work, not eligible to copyright
 #   -------------------------------------------------------------
 
-base:
-  'local':
-    - nodes
-    - roles/saltmaster
+hauteclaire:
+  cloud.profile:
+    - profile: scaleway-debian-stretch

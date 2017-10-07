@@ -14,6 +14,6 @@
 
 saltmaster_cloud_scaleway_profiles:
   file.managed:
-    - name: {{ dirs.etc }}/salt-woodscloud/cloud.profiles.d/scaleway.profiles
+    - name: {{ dirs.etc }}/salt-woodscloud/cloud.profiles.d/scaleway.conf
     - source: salt://roles/saltmaster/salt-cloud/files/scaleway.profiles
     - file_mode: 644
