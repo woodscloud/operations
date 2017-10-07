@@ -35,7 +35,8 @@ scaleway-centos-72:
 
 scaleway-debian-sid:
   provider: scaleway-woodscloud-config
-  image: Debian Sid/Unstable
+  # 2017-06-29 armv7l 4.8.14
+  image: ffca53e7-2a36-4382-a583-b2abc36644c7
 
 scaleway-debian-jessie:
   provider: scaleway-woodscloud-config
@@ -43,7 +44,8 @@ scaleway-debian-jessie:
 
 scaleway-debian-stretch:
   provider: scaleway-woodscloud-config
-  image: Debian Stretch (9.0)
+  # 2017-06-29 armv7l 4.3.5
+  image: 121566c2-4d06-44fc-8f56-8faa658839e5
 
 #   -------------------------------------------------------------
 #   Ubuntu
