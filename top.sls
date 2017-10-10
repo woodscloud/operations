@@ -7,6 +7,8 @@
 #   -------------------------------------------------------------
 
 base:
+  '*':
+    - roles/core/rsyslog
   'local':
     - nodes
     - roles/saltmaster
