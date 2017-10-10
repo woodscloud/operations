@@ -11,6 +11,7 @@ base:
     - roles/core/hostname
     - roles/core/motd
     - roles/core/rsyslog
+    - roles/core/sshd
   'local':
     - nodes
     - roles/saltmaster
