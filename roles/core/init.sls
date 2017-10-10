@@ -1,14 +1,12 @@
 #   -------------------------------------------------------------
-#   Salt configuration for Woods Cloud servers
+#   Salt — Units for every server
 #   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #   Project:        Woods Cloud
-#   Created:        2017-09-25
 #   License:        Trivial work, not eligible to copyright
 #   -------------------------------------------------------------
 
-base:
-  '*':
-    - roles/core
-  'local':
-    - nodes
-    - roles/saltmaster
+include:
+  - ./hostname
+  - ./motd
+  - ./rsyslog
+  - ./sshd
