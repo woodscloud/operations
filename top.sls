@@ -8,6 +8,8 @@
 
 base:
   '*':
+    - roles/core/hostname
+    - roles/core/motd
     - roles/core/rsyslog
   'local':
     - nodes
