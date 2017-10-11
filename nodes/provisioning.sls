@@ -2,16 +2,25 @@
 #   Salt — Nodes
 #   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #   Project:        Woods Cloud
-#   User:           Evuaf
-#   Semantic field: Legendary swords
 #   Created:        2017-10-07
 #   License:        Trivial work, not eligible to copyright
 #   -------------------------------------------------------------
 
-hauteclaire:
-  cloud.profile:
-    - profile: scaleway-debian-stretch
+{% for node_name, node in pillar['nodes'].iteritems() %}
+{% if salt['pillar.get']('nodes:' + node_name + ':enabled', default=True) %}
 
-almace:
+{% if 'profile' in node['cloud'] %}
+
+{{ node_name }}:
   cloud.profile:
-    - profile: scaleway-gitlab
+    - profile: {{ node['cloud']['profile'] }}
+
+{% else %}
+
+{{ node_name }}:
+  cloud.present: {{ node['cloud']['config'] }}
+
+{% endif %}
+
+{% endif %}
+{% endfor %}
