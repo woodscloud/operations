@@ -1,4 +1,4 @@
 base:
   '*':
     - core.forests
-    - core.hostnames
+    - nodes.nodes
