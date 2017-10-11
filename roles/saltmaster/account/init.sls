@@ -32,9 +32,6 @@ salt_account_ownership:
 
 # Deployment account
 deploy_account:
-  group.present:
-    - name: deploy
-    - gid: 9002
   user.present:
     - name: deploy
     - fullname: Deployment and management of the Salt staging area
