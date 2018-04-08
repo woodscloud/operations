@@ -14,6 +14,7 @@
 #   :: Debian
 #   :: Ubuntu
 #   :: Other distros
+#   :: App images
 #
 #   -------------------------------------------------------------
 
@@ -86,3 +87,11 @@ scaleway-arch:
 scaleway-suse-132:
   provider: scaleway-woodscloud-config
   image: openSUSE 13.2
+
+#   -------------------------------------------------------------
+#   App images
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+scaleway-gitlab:
+  provider: scaleway-woodscloud-config
+  image: GitLab

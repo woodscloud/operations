@@ -11,3 +11,7 @@
 hauteclaire:
   cloud.profile:
     - profile: scaleway-debian-stretch
+
+almace:
+  cloud.profile:
+    - profile: scaleway-gitlab
