@@ -45,8 +45,8 @@ scaleway-debian-jessie:
 
 scaleway-debian-stretch:
   provider: scaleway-woodscloud-config
-  # 2017-06-29 armv7l 4.3.5
-  image: 121566c2-4d06-44fc-8f56-8faa658839e5
+  # 2018-08-31 armv7l 4.9.93
+  image: a1a09ae3-f3f3-4576-b3be-793de77c0512
 
 #   -------------------------------------------------------------
 #   Ubuntu
