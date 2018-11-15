@@ -95,3 +95,4 @@ scaleway-suse-132:
 scaleway-gitlab:
   provider: scaleway-woodscloud-config
   image: GitLab
+  commercial_type: VC1S
