@@ -59,6 +59,7 @@ deploy_account:
     - user: deploy
     - group: deploy
     - chmod: 770
+    - makedirs: True
 
 deploy_account_ssh_key:
   cmd.run:
