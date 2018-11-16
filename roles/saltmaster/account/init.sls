@@ -57,7 +57,7 @@ deploy_account:
 /opt/salt/security:
   file.directory:
     - user: deploy
-    - group: ops
+    - group: deploy
     - chmod: 770
 
 deploy_account_ssh_key:
