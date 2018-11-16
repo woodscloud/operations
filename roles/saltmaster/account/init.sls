@@ -47,11 +47,11 @@ deploy_account:
 #
 #   This key should be added to:
 #
-#  - zemke-rhyne account on devcentral
-#    https://devcentral.nasqueron.org/settings/user/zemke-rhyne/page/ssh/
+#  - Woods Cloud account on Scaleway
+#    Used to provision Salt on new instances created through nodes/
 #
-#  - alken-orin account on GitHub
-#    Credentials are stored in DevCentral passphrase application
+#  - Software to deploy on Git hosting facilities
+#    Deployment key, with read-only access
 #   -------------------------------------------------------------
 
 /opt/salt/security:
