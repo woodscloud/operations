@@ -17,3 +17,4 @@ saltmaster_cloud_scaleway_profiles:
     - name: {{ dirs.etc }}/salt/cloud.profiles.d/scaleway.conf
     - source: salt://roles/saltmaster/salt-cloud/files/scaleway.profiles
     - file_mode: 644
+    - makedirs: True
