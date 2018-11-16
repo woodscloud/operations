@@ -9,4 +9,5 @@ include:
   - ./hostname
   - ./motd
   - ./rsyslog
+  - ./salt
   - ./sshd
