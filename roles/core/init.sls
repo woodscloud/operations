@@ -6,8 +6,8 @@
 #   -------------------------------------------------------------
 
 include:
-  - ./hostname
-  - ./motd
-  - ./rsyslog
-  - ./salt
-  - ./sshd
+  - .hostname
+  - .motd
+  - .rsyslog
+  - .salt
+  - .sshd
