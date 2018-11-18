@@ -11,3 +11,4 @@ include:
   - .rsyslog
   - .salt
   - .sshd
+  . .userland-software

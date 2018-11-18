@@ -21,6 +21,18 @@
     },
 }, default='Debian') %}
 
+{% set packages_dirs = salt['grains.filter_by']({
+    'RedHat': {
+        'zfsfunctions': '/usr/share/zsh/site-functions',
+    },
+    'Debian': {
+        'zfsfunctions': '/usr/share/zsh/vendor-completions',
+    },
+    'FreeBSD' : {
+        'zfsfunctions': '/usr/local/share/zsh/site-functions',
+    },
+}, default='RedHat') %}
+
 {% set services = salt['grains.filter_by']({
     'Debian': {
         'manager': 'systemd',
@@ -46,12 +58,15 @@
 {% set packages = salt['grains.filter_by']({
     'Debian' : {
         'sphinx': 'python3-sphinx',
+        'nc': 'netcat',
     },
     'RedHat': {
         'sphinx': 'python3-sphinx',
+        'nc': 'nc',
     },
     'Arch': {
         'sphinx': 'python-sphinx',
+        'nc': 'nc',
     },
     'FreeBSD' : {
         'sphinx': 'py27-sphinx',
