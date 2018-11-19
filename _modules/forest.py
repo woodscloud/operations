@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 #   -------------------------------------------------------------
-#   Salt — Forests execution module
+#   Salt — Forest execution module
 #   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #   Project:        Woods Clouds
 #   Created:        2017-10-11
@@ -20,7 +20,7 @@ def exists(forest):
 
     CLI Example::
 
-        salt '*' forests.exists evuaf
+        salt '*' forest.exists evuaf
     '''
     return forest in __pillar__.get('forests', [])
 
@@ -35,7 +35,7 @@ def nodes(forest):
 
     CLI Example::
 
-        salt-call --local forests.nodes evuaf
+        salt-call --local forest.nodes evuaf
     '''
     if not exists(forest):
         raise SaltInvocationError("The forest doesn't exist.")
@@ -50,7 +50,7 @@ def nodes_property(forest, property):
 
     CLI Example::
 
-        salt-call --local forests.nodes_property evuaf hostname
+        salt-call --local forest.nodes_property evuaf hostname
     '''
     if not exists(forest):
         raise SaltInvocationError("The forest doesn't exist.")

@@ -1,4 +1,4 @@
 base:
   '*':
-    - core.forests
+    - nodes.forests
     - nodes.nodes
