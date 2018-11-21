@@ -19,53 +19,55 @@
 #   -------------------------------------------------------------
 
 #   -------------------------------------------------------------
-#   Fedora family
-#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-scaleway-fedora-22:
-  provider: scaleway-woodscloud-config
-  image: Fedora 22
-
-scaleway-centos-72:
-  provider: scaleway-woodscloud-config
-  image: CentOS 7.2
-
-#   -------------------------------------------------------------
 #   Debian
 #   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 scaleway-debian-sid:
-  provider: scaleway-woodscloud-config
+  <<: &scaleway
+    provider: scaleway-woodscloud-config
+    key_filename: /opt/salt/security/id_ed25519
   # 2017-06-29 armv7l 4.8.14
   image: ffca53e7-2a36-4382-a583-b2abc36644c7
 
 scaleway-debian-jessie:
-  provider: scaleway-woodscloud-config
+  <<: *scaleway
   image: Debian Jessie (8.2 latest)
 
 scaleway-debian-stretch:
-  provider: scaleway-woodscloud-config
+  <<: *scaleway
   # 2018-08-31 armv7l 4.9.93
   image: a1a09ae3-f3f3-4576-b3be-793de77c0512
+
+#   -------------------------------------------------------------
+#   Fedora family
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+scaleway-fedora-27:
+  <<: *scaleway
+  image: Fedora 27
+
+scaleway-centos-72:
+  <<: *scaleway
+  image: CentOS 7.2
 
 #   -------------------------------------------------------------
 #   Ubuntu
 #   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 scaleway-ubuntu-trusty:
-  provider: scaleway-woodscloud-config
+  <<: *scaleway
   image: Ubuntu Trusty (14.04 LTS)
 
 scaleway-ubuntu-xenial:
-  provider: scaleway-woodscloud-config
+  <<: *scaleway
   image: Ubuntu Xenial (16.04 latest)
 
 scaleway-ubuntu-yakkety:
-  provider: scaleway-woodscloud-config
+  <<: *scaleway
   image: Ubuntu Yakkety (16.10 latest)
 
 scaleway-ubuntu-zesty:
-  provider: scaleway-woodscloud-config
+  <<: *scaleway
   image: Ubuntu Zesty (17.04 latest)
 
 #   -------------------------------------------------------------
@@ -73,19 +75,19 @@ scaleway-ubuntu-zesty:
 #   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 scaleway-gentoo:
-  provider: scaleway-woodscloud-config
+  <<: *scaleway
   image: Gentoo
 
 scaleway-alpine-33:
-  provider: scaleway-woodscloud-config
+  <<: *scaleway
   image: Alpine Linux 3.3
 
 scaleway-arch:
-  provider: scaleway-woodscloud-config
+  <<: *scaleway
   image: Archlinux
 
 scaleway-suse-132:
-  provider: scaleway-woodscloud-config
+  <<: *scaleway
   image: openSUSE 13.2
 
 #   -------------------------------------------------------------
@@ -93,6 +95,6 @@ scaleway-suse-132:
 #   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 scaleway-gitlab:
-  provider: scaleway-woodscloud-config
+  <<: *scaleway
   image: GitLab
   commercial_type: VC1S
