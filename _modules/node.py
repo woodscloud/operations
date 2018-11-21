@@ -29,3 +29,16 @@ def get_cloud_property(node, cloud_property):
 
     return None
 
+
+def get_network_interface():
+    """
+    A function to guess the main network interface of the server.
+    """
+    for interface, address in iteritems(__grains__['hwaddr_interfaces']):
+        # Skips loopback
+        if interface == 'lo' or address == '00:00:00:00:00:00':
+            continue
+
+        return interface
+
+    return None
