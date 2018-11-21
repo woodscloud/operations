@@ -43,3 +43,16 @@ nodes:
         - image: a1a09ae3-f3f3-4576-b3be-793de77c0512
         - key_filename: /opt/salt/security/id_ed25519
         - make_master: true
+
+  ##
+  ## Forest:         Woods Cloud Web
+  ##                 [ php-fpm and static sites ]
+  ##
+  ## Semantic field: Fictional forests
+  ##
+
+  druadan:
+    forest: woodscloud
+    hostname: druadan.woodscloud.com
+    cloud:
+      profile: scaleway-debian-stretch-arm64

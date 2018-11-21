@@ -25,3 +25,4 @@
 forests:
   - evuaf
   - woodscloud
+  - woodscloud-web

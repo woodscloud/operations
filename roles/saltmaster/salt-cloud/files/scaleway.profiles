@@ -38,6 +38,14 @@ scaleway-debian-stretch:
   # 2018-08-31 armv7l 4.9.93
   image: a1a09ae3-f3f3-4576-b3be-793de77c0512
 
+scaleway-debian-stretch-arm64:
+  <<: *scaleway
+  # 2018-08-31 aarch64 4.9.93
+  image: 622424dc-25b9-4603-8f42-ca78bf65bb8e
+  <<: &ARM64-2GB
+    commercial_type: ARM64-2GB
+    enable_ipv6: True
+
 #   -------------------------------------------------------------
 #   Fedora family
 #   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
