@@ -6,5 +6,11 @@
 #   License:        Trivial work, not eligible to copyright
 #   -------------------------------------------------------------
 
-include:
-  - .nginx
+#   -------------------------------------------------------------
+#   Required softwares
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+webserver_base_nginx_software:
+  pkg.installed:
+    - pkgs:
+      - nginx
