@@ -1,16 +1,9 @@
 #   -------------------------------------------------------------
-#   Salt configuration for Woods Cloud servers
+#   Salt — Web server configuration
 #   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #   Project:        Woods Cloud
-#   Created:        2017-09-25
+#   Created:        2018-11-30
 #   License:        Trivial work, not eligible to copyright
 #   -------------------------------------------------------------
 
-base:
-  '*':
-    - roles/core
-  'local':
-    - nodes
-    - roles/saltmaster
-  druadan:
-    - roles/webserver-base
+#   This section is intentionally left blank.
