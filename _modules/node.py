@@ -10,8 +10,8 @@
 #   -------------------------------------------------------------
 
 
-from salt.exceptions import SaltInvocationError
 from six import iteritems
+
 
 def get_cloud_property(node, cloud_property):
     """
