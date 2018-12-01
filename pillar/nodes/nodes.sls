@@ -52,7 +52,7 @@ nodes:
   ##
 
   druadan:
-    forest: woodscloud
+    forest: woodscloud-web
     hostname: druadan.woodscloud.com
     cloud:
       profile: scaleway-debian-stretch-arm64
