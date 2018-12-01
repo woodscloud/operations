@@ -1,0 +1,34 @@
+#   -------------------------------------------------------------
+#   Salt — Let's encrypt certificates
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#   Project:        Woods Cloud
+#   Created:        2017-04-27
+#   License:        Trivial work, not eligible to copyright
+#   -------------------------------------------------------------
+
+{% from "map.jinja" import dirs with context %}
+
+#   -------------------------------------------------------------
+#   Software
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+letsencrypt_software:
+  pkg.installed:
+    - name: certbot
+
+#   -------------------------------------------------------------
+#   Working directory
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+/var/letsencrypt-auto:
+  file.directory:
+    - user: root
+    - dir_mode: 711
+
+#   -------------------------------------------------------------
+#   Configuration file
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+{{ dirs.etc }}/letsencrypt/cli.ini:
+  file.managed:
+    - source: salt://roles/webserver-base/letsencrypt/files/cli.ini
