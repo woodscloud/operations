@@ -11,6 +11,7 @@
 #   -------------------------------------------------------------
 #
 #   :: Domains by forest
+#   :: Sites by forest
 #
 #   -------------------------------------------------------------
 
@@ -19,4 +20,13 @@
 #   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 webserver_domains:
-  woodscloud-web: []
+  woodscloud-web:
+    - woodscloud.com
+
+#   -------------------------------------------------------------
+#   Sites by forest
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+webserver_sites:
+  woodscloud-web:
+    www.woodscloud.com: {}
