@@ -57,18 +57,22 @@
 
 {% set packages = salt['grains.filter_by']({
     'Debian' : {
+        'nginx': 'nginx-full',
         'sphinx': 'python3-sphinx',
         'nc': 'netcat',
     },
     'RedHat': {
+        'nginx': 'nginx',
         'sphinx': 'python3-sphinx',
         'nc': 'nc',
     },
     'Arch': {
+        'nginx': 'nginx',
         'sphinx': 'python-sphinx',
         'nc': 'nc',
     },
     'FreeBSD' : {
+        'nginx': 'nginx',
         'sphinx': 'py27-sphinx',
     },
 }, default='Debian') %}

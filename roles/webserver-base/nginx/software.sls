@@ -6,6 +6,8 @@
 #   License:        Trivial work, not eligible to copyright
 #   -------------------------------------------------------------
 
+{% from "map.jinja" import packages with context %}
+
 #   -------------------------------------------------------------
 #   Required softwares
 #   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -13,4 +15,7 @@
 webserver_base_nginx_software:
   pkg.installed:
     - pkgs:
-      - nginx
+      - {{ packages['nginx'] }}
+    {% if grains['os'] == 'Debian' %}
+    - fromrepo: {{ grains['oscodename'] }}-backports
+    {% endif %}
