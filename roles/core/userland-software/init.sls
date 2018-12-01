@@ -19,6 +19,14 @@ epel-release:
 
 {% endif %}
 
+{% if grains['os'] == 'Debian' %}
+
+backports_repository:
+  pkgrepo.managed:
+    - name: deb http://ftp.debian.org/debian {{ grains['oscodename'] }}-backports main
+
+{% endif %}
+
 #   -------------------------------------------------------------
 #   Shells
 #   -------------------------------------------------------------
