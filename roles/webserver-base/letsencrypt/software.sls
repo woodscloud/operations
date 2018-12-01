@@ -16,6 +16,10 @@ letsencrypt_software:
   pkg.installed:
     - name: certbot
 
+    {% if grains['os'] == 'Debian' %}
+    - fromrepo: {{ grains['oscodename'] }}-backports
+    {% endif %}
+
 #   -------------------------------------------------------------
 #   Working directory
 #   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
