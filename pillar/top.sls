@@ -5,3 +5,5 @@ base:
     - nodes.nodes
     - core.groups
     - core.users
+  druadan:
+    - webserver.certificates
