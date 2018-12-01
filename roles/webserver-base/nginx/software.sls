@@ -9,13 +9,14 @@
 {% from "map.jinja" import packages with context %}
 
 #   -------------------------------------------------------------
-#   Required softwares
+#   Required software
 #   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 webserver_base_nginx_software:
   pkg.installed:
     - pkgs:
       - {{ packages['nginx'] }}
+
     {% if grains['os'] == 'Debian' %}
     - fromrepo: {{ grains['oscodename'] }}-backports
     {% endif %}
