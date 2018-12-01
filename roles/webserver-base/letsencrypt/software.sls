@@ -28,11 +28,3 @@ letsencrypt_software:
   file.directory:
     - user: root
     - dir_mode: 711
-
-#   -------------------------------------------------------------
-#   Configuration file
-#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-{{ dirs.etc }}/letsencrypt/cli.ini:
-  file.managed:
-    - source: salt://roles/webserver-base/letsencrypt/files/cli.ini
