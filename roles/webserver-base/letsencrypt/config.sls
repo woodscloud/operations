@@ -15,3 +15,12 @@
 {{ dirs.etc }}/letsencrypt/cli.ini:
   file.managed:
     - source: salt://roles/webserver-base/letsencrypt/files/cli.ini
+
+#   -------------------------------------------------------------
+#   Register account
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+create_letsencrypt_account:
+  cmd.run:
+    - name: certbot register
+    - creates: {{ dirs.etc }}/letsencrypt/accounts
