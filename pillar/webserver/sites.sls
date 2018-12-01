@@ -13,6 +13,7 @@
 #   :: Domains by forest
 #   :: Sites by forest
 #   :: Content by forest and role
+#   :: PHP sites
 #
 #   -------------------------------------------------------------
 
@@ -53,3 +54,29 @@ web_content_sls:
     webserver-classic:
       # Fauve services
       - .co/idrissi
+
+#   -------------------------------------------------------------
+#   PHP sites
+#
+#   Username must be unique and use max 31 characters.
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+webserver_php_sites:
+
+  woodscloud-web:
+
+    # Woods Cloud front-end
+
+    www.woodscloud.com:
+      domain: woodscloud.com
+      subdomain: www
+      user: web-com-woodscloud-www
+      php-fpm: prod
+
+    # Fauve services
+
+    www.idrissi.co:
+      domain: idrissi.co
+      subdomain: www
+      user: web-co-idrissi
+      php-fpm: prod
