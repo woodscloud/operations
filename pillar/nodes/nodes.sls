@@ -54,5 +54,7 @@ nodes:
   druadan:
     forest: woodscloud-web
     hostname: druadan.woodscloud.com
+    roles:
+      - webserver-classic
     cloud:
       profile: scaleway-debian-stretch-arm64

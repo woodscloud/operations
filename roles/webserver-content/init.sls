@@ -1,13 +1,14 @@
 #   -------------------------------------------------------------
-#   Salt — Salt master configuration
+#   Salt — Webserver content
 #   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-#   Project:        Woods Cloud
-#   Created:        2017-10-05
+#   Project:        Eglide
+#   Created:        2017-11-23
 #   License:        Trivial work, not eligible to copyright
 #   -------------------------------------------------------------
 
 include:
-  - .account
+  # Prerequisites
   - roles/_common/deploy
-  - .salt-cloud
-  - .staging
+
+  # Content
+  - .co/idrissi

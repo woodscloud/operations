@@ -1,13 +1,9 @@
 #   -------------------------------------------------------------
-#   Salt — Salt master configuration
+#   Salt — Provision *.idrissi.co sites
 #   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-#   Project:        Woods Cloud
-#   Created:        2017-10-05
+#   Project:        Fauve professional site
 #   License:        Trivial work, not eligible to copyright
 #   -------------------------------------------------------------
 
 include:
-  - .account
-  - roles/_common/deploy
-  - .salt-cloud
-  - .staging
+  - .www

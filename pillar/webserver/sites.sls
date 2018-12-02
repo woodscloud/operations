@@ -12,6 +12,7 @@
 #
 #   :: Domains by forest
 #   :: Sites by forest
+#   :: Content by forest and role
 #
 #   -------------------------------------------------------------
 
@@ -30,3 +31,25 @@ webserver_domains:
 webserver_sites:
   woodscloud-web:
     www.woodscloud.com: {}
+
+#   -------------------------------------------------------------
+#   Content by forest and role
+#
+#   The sites listed here has associated states documenting
+#   how to build them.
+#
+#   As they are sorted by forest and role, they are only deployed
+#   on the relevant servers.
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+web_content_sls:
+
+  ###
+  ### Woods Cloud - web
+  ###
+
+  woodscloud-web:
+
+    webserver-classic:
+      # Fauve services
+      - .co/idrissi
