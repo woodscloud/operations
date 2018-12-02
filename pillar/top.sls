@@ -7,3 +7,4 @@ base:
     - core.users
   druadan:
     - webserver.certificates
+    - webserver.sites
