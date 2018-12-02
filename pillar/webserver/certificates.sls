@@ -12,6 +12,17 @@
 
 letsencrypt_certificates:
   woodscloud-web:
+
+    # Woods Clouds
+
     www.woodscloud.com:
       aliases:
         - woodscloud.com
+
+    # Idriss al Idrissi professional services
+
+    www.idrissi.co:
+      aliases:
+        - idrissi.co
+
+    qa.idrissi.co: {}
