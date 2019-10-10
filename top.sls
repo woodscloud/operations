@@ -14,4 +14,4 @@ base:
     - roles/saltmaster
   druadan:
     - roles/webserver-base
-    - roles/webserver-clasic
+    - roles/webserver-classic
