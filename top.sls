@@ -15,3 +15,4 @@ base:
   druadan:
     - roles/webserver-base
     - roles/webserver-classic
+    - roles/webserver-content
