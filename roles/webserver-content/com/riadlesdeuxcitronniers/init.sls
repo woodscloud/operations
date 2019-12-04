@@ -1,15 +1,9 @@
 #   -------------------------------------------------------------
-#   Salt — Webserver content
+#   Salt — Provision *.riadlesdeuxcitronniers.com sites
 #   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-#   Project:        Eglide
-#   Created:        2017-11-23
+#   Project:        STE DAMAPRO SARL / Riad Les deux citronniers
 #   License:        Trivial work, not eligible to copyright
 #   -------------------------------------------------------------
 
 include:
-  # Prerequisites
-  - roles/_common/deploy
-
-  # Content
-  - .co/idrissi
-  - .com/riadlesdeuxcitronniers
+  - .www

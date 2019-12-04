@@ -53,3 +53,6 @@ web_content_sls:
     webserver-classic:
       # Fauve services
       - .co/idrissi
+
+      # Managed by ihi
+      - .com/riadlesdeuxcitronniers
