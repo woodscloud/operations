@@ -58,3 +58,19 @@ nodes:
       - webserver-classic
     cloud:
       profile: scaleway-debian-stretch-arm64
+
+  chetwood:
+    forest: woodscloud-web
+    hostname: chetwood.woodscloud.com
+    roles:
+      - webserver-classic
+    cloud:
+      profile: scaleway-debian-stretch-arm64
+
+  dimholt:
+    forest: woodscloud-web
+    hostname: dimholt.woodscloud.com
+    roles:
+      - webserver-loadbalancer
+    cloud:
+      profile: scaleway-debian-stretch-arm64
