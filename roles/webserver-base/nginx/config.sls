@@ -5,7 +5,7 @@
 #   License:        Trivial work, not eligible to copyright
 #   -------------------------------------------------------------
 
-{% from "map.jinja" import dirs with context %}
+{% from "map.jinja" import dirs, services with context %}
 {% set forest = grains['forest'] %}
 
 #   -------------------------------------------------------------
@@ -35,3 +35,19 @@ webserver_core_nginx_includes:
   file.directory:
     - mode: 711
 {% endfor %}
+
+#   -------------------------------------------------------------
+#   systemd configuration
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+{% if services['manager'] == 'systemd' %}
+
+/etc/systemd/system/nginx.service.d:
+  file.directory:
+    - mode: 755
+
+/etc/systemd/system/nginx.service.d/override.conf:
+  file.managed:
+    - source: salt://roles/webserver-base/nginx/files/systemd-override.conf
+
+{% endif %}
