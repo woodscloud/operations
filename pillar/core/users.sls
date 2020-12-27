@@ -36,6 +36,7 @@ shellusers:
     uid: 5001
     ssh_keys:
       - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBzD5VzetMFTUHLWrLyBsnZ6bdwDa4Ip9WWAh5nLxKyR dereckson@ysul.nasqueron.org
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINgiReRjBvGGZ7QZC9ATJ2UIWAd9yH0Is7Xqz1kG1QQt dereckson@windriver.nasqueron.org
 
   fauve:
     fullname: Idriss al Idrissi
